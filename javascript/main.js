@@ -7,14 +7,16 @@ function renderItems(items, processType, elementId, processFunction) {
     let placeholderId = processType + '-' + title.replaceAll(' ', '-');
 
     placeholder +=
-      '<div>' +
+      '<div class="itemContainer">' +
+      '<p>' +
       title +
-      '<button ' +
+      '</p>' +
+      '<div class="actionButton" ' +
       'id="' +
       placeholderId +
       '">' +
       processType +
-      '</button>' +
+      '</div>' +
       '</div>';
     itemsMeta.push({ id: placeholderId, title: title });
   }
